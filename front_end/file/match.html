@@ -1,0 +1,223 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+
+
+<!-- Button to show the modal -->
+<button id="showFormButton" class="btn btn-success m-3" data-toggle="modal" data-target="#addSpiceModal">Add </button>
+
+<div class="modal fade" id="addSpiceModal" tabindex="-1" aria-labelledby="addSpiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addSpiceModalLabel">Add MATCH</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="addSpiceForm" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="title" class="form-label">TITLE</label>
+            <input type="text" class="form-control" id="title"   required>
+            <span id="nameError" class="error text-danger"></span>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">DESCRIPTION</label>
+            <input type="text" class="form-control" id="description"   required>
+            <span id="totalError" class="error text-danger"></span>
+          </div>
+          <div class="mb-3">
+            <label for="genre" class="form-label">GENRE</label>
+            <input type="text" class="form-control" id="genre"   required>
+            <span id="locationError" class="error text-danger"></span>
+          </div>
+          <div class="mb-3">
+            <label for="team" class="form-label">TEAM</label>
+            <input type="text" class="form-control" id="team"   required>
+            <span id="descriptionError" class="error text-danger"></span>
+          </div>
+          <div class="mb-3">
+            <label for="durationMinutes" class="form-label">TIME</label>
+            <input type="text" class="form-control" id="durationMinutes"   required>
+            <span id="durationError" class="error text-danger"></span>
+          </div>
+
+          <div class="mb-3">
+            <label for="releaseDate" class="form-label"> DATE</label>
+            <input type="text" class="form-control" id="releaseDate"   required>
+            <span id="releaseError" class="error text-danger"></span>
+          </div>
+
+          <div class="mb-3">
+            <label for="language" class="form-label">SPORT_TYPE</label>
+            <input type="text" class="form-control" id="language"   required>
+            <span id="languageError" class="error text-danger"></span>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="cast" class="form-label">CAST</label>
+            <input type="text" class="form-control" id="cast"   required>
+            <span id="castError" class="error text-danger"></span>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="trailerUrl" class="form-label">MEMBER COUNT</label>
+            <input type="text" class="form-control" id="trailerUrl"   required>
+            <span id="trailerUrlError" class="error text-danger"></span>
+          </div>
+          <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image URL</label>
+            <input type="file" class="form-control" id="imageUrl" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add FILM</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="updateCustomerModal" tabindex="-1" aria-labelledby="updateCustomerModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="container m-2">
+        <form>
+          <h2>UPDATE FILM</h2>
+
+
+
+          <div class="mb-3 box-container">
+            <div class="box-label">
+              <label for="updated_film_id" class="form-label">ID</label>
+            </div>
+            <input type="text" class="form-control" id="updated_film_id" readonly>
+          </div>
+          <div class="mb-3 box-container">
+            <div class="box-label">
+              <label for="updated_film_title" class="form-label">  TITLE</label>
+            </div>
+            <input type="text" class="form-control" id="updated_film_title">
+          </div>
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_description" class="form-label"> DESCRIPTION</label>
+            </div>
+            <input type="text" class="form-control" id="updated_description">
+          </div>
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_genre" class="form-label">GENRE</label>
+            </div>
+            <input type="text" class="form-control" id="updated_genre">
+          </div>
+
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_team" class="form-label">TEAM</label>
+            </div>
+            <input type="text" class="form-control" id="updated_team">
+          </div>
+
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_duration" class="form-label">DURATION</label>
+            </div>
+            <input type="text" class="form-control" id="updated_duration">
+          </div>
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_release" class="form-label"> DATE</label>
+            </div>
+            <input type="text" class="form-control" id="updated_release">
+          </div>
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_language" class="form-label">COUNTRY</label>
+            </div>
+            <input type="text" class="form-control" id="updated_language">
+          </div>
+
+
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_cast" class="form-label">CAST</label>
+            </div>
+            <input type="text" class="form-control" id="updated_cast">
+          </div>
+          <div class="mb-4 box-container">
+            <div class="box-label">
+              <label for="updated_trailer" class="form-label">MEMBER COUNT</label>
+            </div>
+            <input type="text" class="form-control" id="updated_trailer">
+          </div>
+
+          <div class="mb-3">
+            <label for="edit_image" class="form-label">IMAGE URL</label>
+            <input type="file" class="form-control" id="edit_image" accept="image/*">
+            <small  class="text-muted">Leave empty to keep current image</small>
+          </div>
+
+
+          <button id="btn_update_customer" type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead >
+  <tr>
+    <!--      <td>Profile</td>-->
+    <td>ID</td>
+    <td>TITLE</td>
+    <td>DESCRIPTION</td>
+    <td>GENRE</td>
+    <td>TEAM</td>
+    <td>START TIME</td>
+    <td> DATE</td>
+    <td>COUNTRY</td>
+    <td>CAST</td>
+    <td>MEMBER COUNT</td>
+    <td>IMAGE</td>
+
+
+    <td>Update</td>
+    <td>Delete</td>
+
+  </tr>
+  </thead>
+  <tbody id="customer_table_body">
+
+  </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/front_end/js/film.js"></script>
+
+</body>
+</html>
